@@ -9,4 +9,11 @@ port = 30814
 
 big_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 big_server.connect((big_ip, port))
-big_server.send("send".encode())
+big_server.send("waiting".encode())
+
+connection_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+connection_server.bind(("0.0.0.0", port))
+connection_server.listen(5)
+conn, addr = connection_server.accept()
+print("Holy cow we got a connection")
+print(conn.recv(1024).decode())

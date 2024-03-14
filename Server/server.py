@@ -13,3 +13,8 @@ client_socket, address = server.accept()
 print("GOTTEM at", address)
 byts = client_socket.recv(1024)
 print(byts.decode())
+
+host_socket, address = server.accept()
+print("GOTTEM again at", address)
+byts = client_socket.recv(1024)
+print(byts.decode())

@@ -9,8 +9,9 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((ip, port))
 server.listen(5)
 
-host_socket, address = server.accept()
-print("got a host", address)
-host_ip = address[1]
-byts = host_socket.recv(1024)
-print(byts.decode())
+while True:
+    host_socket, address = server.accept()
+    print("got a host", address)
+    host_ip = address[1]
+    byts = host_socket.recv(1024)
+    print(byts.decode())

@@ -10,5 +10,5 @@ big_port = 30814
 port2 = 30811
 
 big_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-big_server.connect((host_ip, big_port))
+big_server.connect((host_ip, port2))
 big_server.send("connect me".encode())

@@ -9,7 +9,7 @@ port = 30814
 port2 = 30811
 
 big_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-big_server.connect((big_ip, port))
+big_server.connect((big_ip, port2))
 print("Connected")
 print(big_server.recv(1024).decode())
 big_server.close()

@@ -10,6 +10,6 @@ server.bind((ip, port))
 server.listen(5)
 
 client_socket, address = server.accept()
-print("GOTTEM")
+print("GOTTEM at", address)
 byts = client_socket.recv(1024)
 print(byts.decode())
